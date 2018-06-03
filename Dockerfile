@@ -6,5 +6,5 @@ EXPOSE 3000
 
 WORKDIR /api
 
-COPY project.clj ./
+COPY project.clj profiles.clj ./
 RUN lein deps

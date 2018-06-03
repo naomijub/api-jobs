@@ -10,7 +10,14 @@ services:
 
   apitest:
     build: .
-    command: lein test
+    command: lein test-refresh
+    volumes:
+    - ./src:/api/src
+    - ./test:/api/test
+
+  apici:
+    build: .
+    command: bash -c "lein cljfmt check && lein test"
     volumes:
     - ./src:/api/src
     - ./test:/api/test

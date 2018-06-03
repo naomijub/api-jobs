@@ -6,7 +6,10 @@ lein: lein
 before_script:
   - lein deps
 
-script: lein test
+script:
+  - lein test
+  - lein ancient
+  - lein cljfmt check
 
 jdk:
   - openjdk8
