@@ -7,7 +7,7 @@
 
 (defroutes app-routes
   (context "/jobs" []
-    (GET "/" [lang] (response {:language lang})))
+    (GET "/" [lang] (response {:language lang :jobs []})))
   (route/not-found "Not Found"))
 
 (def app
