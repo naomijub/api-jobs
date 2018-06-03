@@ -11,4 +11,4 @@ docker-test:
 	docker-compose run apitest
 
 docker-ci: dependency-check
-	docker-compose run apici
+	docker-compose run api-ci

@@ -15,7 +15,7 @@ services:
     - ./src:/api/src
     - ./test:/api/test
 
-  apici:
+  api-ci:
     build: .
     command: bash -c "lein cljfmt check && lein test"
     volumes:

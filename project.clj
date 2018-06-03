@@ -5,7 +5,9 @@
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [compojure "1.6.1"]
                  [metosin/compojure-api "1.1.12"]
-                 [ring/ring-defaults "0.3.2"]]
+                 [ring/ring-defaults "0.3.2"]
+                 [clj-http "3.9.0"]
+                 [cheshire "5.8.0"]]
   :ring {:handler api-job.handler/app}
   :test-refresh {:growl false
                  :notify-on-success false
