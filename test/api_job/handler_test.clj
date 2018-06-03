@@ -3,12 +3,16 @@
             [ring.mock.request :as mock]
             [api-job.handler :refer :all]))
 
-(deftest test-app
+;;(defn fake-response []
+;;  (slurp "resources/public/clojure-response.json"))
+
+(deftest app-test
   (testing "jobs route"
-    (let [response (app (mock/request :get "/"))
-          {:keys [status body]} response]
-      (is (= status 200))
-      (is (= body "Hello World"))))
+    (testing "language value"
+      (let [response (app (mock/request :get "/jobs/?lang=clojure"))
+            {:keys [status body]} response]
+        (is (= status 200))
+        (is (= (:language body) "clojure")))))
 
   (testing "not-found route"
     (let [response (app (mock/request :get "/invalid"))]
