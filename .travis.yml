@@ -1,0 +1,12 @@
+language: clojure
+
+sudo: enabled
+lein: lein
+
+before_script:
+  - lein deps
+
+script: lein test
+
+jdk:
+  - openjdk8
