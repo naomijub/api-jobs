@@ -2,7 +2,7 @@ version: '3'
 services:
   api:
     build: .
-    command: lein ring server
+    command: lein ring server-headless
     ports:
     - "3000:3000"
     volumes:
