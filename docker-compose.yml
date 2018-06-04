@@ -14,6 +14,7 @@ services:
     volumes:
     - ./src:/api/src
     - ./test:/api/test
+    - ./resources/:/api/resources
 
   api-ci:
     build: .
@@ -21,3 +22,4 @@ services:
     volumes:
     - ./src:/api/src
     - ./test:/api/test
+    - ./resources/:/api/resources
